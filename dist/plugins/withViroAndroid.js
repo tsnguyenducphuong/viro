@@ -90,8 +90,8 @@ const withViroAppBuildGradle = (config) => (0, config_plugins_1.withAppBuildGrad
 
     implementation project(':gvr_common')
     implementation project(':arcore_client')
-    implementation project(':react_viro4283')
-    implementation project(':viro_renderer')
+    implementation project(path ':react_viro4283')
+    implementation project(path ':viro_renderer')
     implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
     implementation 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'`);
     return config;
