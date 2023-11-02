@@ -90,7 +90,7 @@ const withViroAppBuildGradle = (config) => (0, config_plugins_1.withAppBuildGrad
 
     implementation project(':gvr_common')
     implementation project(':arcore_client')
-    implementation project(path ':react_viro_rn072')
+    implementation project(path ':react_viro')
     implementation project(path ':viro_renderer')
     implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
     implementation 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'`);
@@ -102,7 +102,7 @@ include ':react_viro', ':arcore_client', ':gvr_common', ':viro_renderer'
 project(':arcore_client').projectDir = new File('../node_modules/@viro-community/react-viro/android/arcore_client')
 project(':gvr_common').projectDir = new File('../node_modules/@viro-community/react-viro/android/gvr_common')
 project(':viro_renderer').projectDir = new File('../node_modules/@viro-community/react-viro/android/viro_renderer')
-project(':react_viro_rn072').projectDir = new File('../node_modules/@viro-community/react-viro/android/react_viro')
+project(':react_viro').projectDir = new File('../node_modules/@viro-community/react-viro/android/react_viro')
     `;
     return config;
 });
