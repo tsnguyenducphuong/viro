@@ -86,7 +86,8 @@ const withViroProjectBuildGradle = (config) => (0, config_plugins_1.withProjectB
     return newConfig;
 });
 const withViroAppBuildGradle = (config) => (0, config_plugins_1.withAppBuildGradle)(config, async (config) => {
-    config.modResults.contents = config.modResults.contents.replace(/implementation "com.facebook.react:react-native:\+"  \/\/ From node_modules/, `implementation "com.facebook.react:react-native:0.72.6"  // From node_modules
+    //config.modResults.contents = config.modResults.contents.replace(/implementation "com.facebook.react:react-native:\+"  \/\/ From node_modules/, `implementation "com.facebook.react:react-native:0.72.6"  // From node_modules
+    config.modResults.contents = config.modResults.contents.replace(/dependencies {/, `dependencies {
 
     implementation project(':gvr_common')
     implementation project(':arcore_client')

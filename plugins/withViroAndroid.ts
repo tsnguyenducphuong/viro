@@ -132,10 +132,11 @@ const withViroProjectBuildGradle = (config: ExpoConfig) =>
 
 const withViroAppBuildGradle = (config: ExpoConfig) =>
   withAppBuildGradle(config, async (config) => {
-    config.modResults.contents = config.modResults.contents.replace(
-      /implementation "com.facebook.react:react-native:\+"  \/\/ From node_modules/,
-      `implementation "com.facebook.react:react-native:+"  // From node_modules
-
+    //config.modResults.contents = config.modResults.contents.replace(
+    //  /implementation "com.facebook.react:react-native:\+"  \/\/ From node_modules/,
+    //  `implementation "com.facebook.react:react-native:+"  // From node_modules
+config.modResults.contents = config.modResults.contents.replace(/dependencies {/, `dependencies {
+  
     implementation project(':gvr_common')
     implementation project(':arcore_client')
     implementation project(path: ':react_viro')
