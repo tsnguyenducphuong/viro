@@ -1,15 +1,15 @@
 apply plugin: 'com.android.library'
 android {
     compileSdkVersion 33
-    defaultConfig {     
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion 
-        compileSdkVersion  33//rootProject.ext.compileSdkVersion
-        versionCode 1
-        versionName "1.0"
-        missingDimensionStrategy 'viro-community_react-viro', 'general' //add this line
-    }
+    // defaultConfig {     
+    //     minSdkVersion rootProject.ext.minSdkVersion
+    //     targetSdkVersion rootProject.ext.targetSdkVersion 
+    //     compileSdkVersion  33//rootProject.ext.compileSdkVersion
+    //     versionCode 1
+    //     versionName "1.0"
+    //     missingDimensionStrategy 'viro-community_react-viro', 'general' //add this line
+    // }
 } 
 
-configurations.create("default")
-artifacts.add("default", file('sdk-common-1.180.0.aar'))
+configurations.maybeCreate("defaultgvr")
+artifacts.add("defaultgvr", file('sdk-common-1.180.0.aar'))
