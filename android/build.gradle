@@ -38,14 +38,14 @@ allprojects {
 //     delete rootProject.buildDir
 // }
 
-// android {
-//     compileSdkVersion 33
-//     defaultConfig {     
-//         minSdkVersion rootProject.ext.minSdkVersion
-//         targetSdkVersion rootProject.ext.targetSdkVersion 
-//         compileSdkVersion  33//rootProject.ext.compileSdkVersion
-//         versionCode 1
-//         versionName "1.0"
-//         missingDimensionStrategy 'viro-community_react-viro', 'general' //add this line
-//     }
-// }
+android {
+    compileSdkVersion 33
+    defaultConfig {     
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion 
+        compileSdkVersion  33//rootProject.ext.compileSdkVersion
+        versionCode 1
+        versionName "1.0"
+        missingDimensionStrategy 'viro-community_react-viro', 'general' //add this line
+    }
+}
