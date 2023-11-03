@@ -135,7 +135,7 @@ const withViroAppBuildGradle = (config: ExpoConfig) =>
     //config.modResults.contents = config.modResults.contents.replace(
     //  /implementation "com.facebook.react:react-native:\+"  \/\/ From node_modules/,
     //  `implementation "com.facebook.react:react-native:+"  // From node_modules
-config.modResults.contents = config.modResults.contents.replace(/dependencies {/, `dependencies {
+config.modResults.contents = config.modResults.contents.replace(/dependencies\s?{/, `dependencies {
   
     implementation project(':gvr_common')
     implementation project(':arcore_client')
