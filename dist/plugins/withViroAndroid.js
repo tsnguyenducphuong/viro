@@ -97,8 +97,8 @@ const withViroAppBuildGradle = (config) => (0, config_plugins_1.withAppBuildGrad
 
     compile project(':gvr_common')
     compile project(':arcore_client')
-    compile project(path ':react_viro')
-    compile project(path ':viro_renderer')
+    compile project(':react_viro')
+    compile project(':viro_renderer')
     compile 'com.google.android.exoplayer:exoplayer:2.17.1'
     compile 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'    
     
