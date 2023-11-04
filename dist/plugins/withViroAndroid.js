@@ -87,7 +87,7 @@ const withViroProjectBuildGradle = (config) => (0, config_plugins_1.withProjectB
 });
 const withViroAppBuildGradle = (config) => (0, config_plugins_1.withAppBuildGradle)(config, async (config) => {
     //config.modResults.contents = config.modResults.contents.replace(/dependencies\s?{\n\s*\/\/ The version of react-native is set by the React Native Gradle Plugin/, `dependencies {
-    config.modResults.contents = config.modResults.contents.replace(/implementation "com.facebook.react:react-native:\+"  \/\/ From node_modules/, `implementation "com.facebook.react:react-native:0.72.6"  // From node_modules
+    config.modResults.contents = config.modResults.contents.replace(/implementation "com.facebook.react:react-native:*"/, `implementation "com.facebook.react:react-native:0.72.6"  // From node_modules
     
     compile project(':gvr_common')
     compile project(':arcore_client')
