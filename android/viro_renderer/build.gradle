@@ -11,7 +11,7 @@ android {
     }
 }
  
-configurations.maybeCreate("defaultvirorender")
-artifacts.add("defaultvirorender", file('viro_renderer-release.aar'))
+configurations.maybeCreate("default")
+artifacts.add("default", file('viro_renderer-release.aar'))
 
 

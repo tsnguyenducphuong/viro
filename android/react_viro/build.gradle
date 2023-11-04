@@ -11,5 +11,5 @@ android {
     }
 }
 
-configurations.maybeCreate("defaultviro")
-artifacts.add("defaultviro", file('react_viro-release.aar'))
+configurations.maybeCreate("default")
+artifacts.add("default", file('react_viro-release.aar'))

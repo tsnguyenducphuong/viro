@@ -132,21 +132,18 @@ const withViroProjectBuildGradle = (config: ExpoConfig) =>
 
 const withViroAppBuildGradle = (config: ExpoConfig) =>
   withAppBuildGradle(config, async (config) => {
-    //config.modResults.contents = config.modResults.contents.replace(
-    //  /implementation "com.facebook.react:react-native:\+"  \/\/ From node_modules/,
-    //  `implementation "com.facebook.react:react-native:+"  // From node_modules
-    config.modResults.contents = config.modResults.contents.replace(/dependencies\s?{\n\s*\/\/ The version of react-native is set by the React Native Gradle Plugin/, `dependencies {
-
-
+    //config.modResults.contents = config.modResults.contents.replace(/dependencies\s?{\n\s*\/\/ The version of react-native is set by the React Native Gradle Plugin/, `dependencies {
+    config.modResults.contents = config.modResults.contents.replace(
+     /implementation "com.facebook.react:react-native:\+"  \/\/ From node_modules/,
+     `implementation "com.facebook.react:react-native:+"  // From node_modules
+    
       compile project(':gvr_common')
       compile project(':arcore_client')
       compile project(path ':react_viro')
       compile project(path ':viro_renderer')
       compile 'com.google.android.exoplayer:exoplayer:2.17.1'
-      compile 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'
-  
-      // The version of react-native is set by the React Native Gradle Plugin
-      
+      compile 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'  
+           
       `);
     return config;
   });
