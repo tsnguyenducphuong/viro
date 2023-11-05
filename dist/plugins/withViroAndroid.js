@@ -82,7 +82,7 @@ const withBranchAndroid = (config, props) => {
 };
 const withViroProjectBuildGradle = (config) => (0, config_plugins_1.withProjectBuildGradle)(config, async (newConfig) => {
     newConfig.modResults.contents = newConfig.modResults.contents.replace(/minSdkVersion.*/, `minSdkVersion = 24`);
-    newConfig.modResults.contents = newConfig.modResults.contents.replace(/classpath\("com.android.tools.build:gradle.*/, `classpath('com.android.tools.build:gradle:8.0.1')`);
+    newConfig.modResults.contents = newConfig.modResults.contents.replace(/classpath\("com.android.tools.build:gradle.*/, `classpath('com.android.tools.build:gradle:4.1.1')`);
     return newConfig;
 });
 const withViroAppBuildGradle = (config) => (0, config_plugins_1.withAppBuildGradle)(config, async (config) => {
@@ -98,6 +98,7 @@ const withViroAppBuildGradle = (config) => (0, config_plugins_1.withAppBuildGrad
     implementation project(':gvr_common')
     implementation project(':arcore_client')
     implementation project(path: ':react_viro')
+    implementation fileTree(dir: "libs", include: ["*.aar"])
     implementation project(path: ':viro_renderer')
     implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
     implementation 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'  
