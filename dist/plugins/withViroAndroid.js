@@ -95,12 +95,12 @@ const withViroAppBuildGradle = (config) => (0, config_plugins_1.withAppBuildGrad
     // The version of react-native is set by the React Native Gradle Plugin
 
 
-    compile project(':gvr_common')
-    compile project(':arcore_client')
-    compile project(':react_viro')
-    compile project(':viro_renderer')
-    compile 'com.google.android.exoplayer:exoplayer:2.17.1'
-    compile 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'    
+    implementation project(':gvr_common')
+    implementation project(':arcore_client')
+    implementation project(path: ':react_viro')
+    implementation project(path: ':viro_renderer')
+    implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
+    implementation 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'  
     
     `);
     return config;
